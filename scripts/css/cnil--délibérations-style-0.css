@@ -1,0 +1,148 @@
+
+/* */
+br {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: 9px; /* change this to whatever height you want it */
+}
+/*
+  font|strong|b|em|i|sup|u|tt
+
+  Certaines balises de style ne sont pas fermées. 
+  On désactive donc le formatage original pour éviter des effets indésirables.
+
+*/
+b {
+  font-weight: normal;
+}
+i {
+  font-style: normal;
+}
+
+h1 {
+  padding-top: 5%;
+  display: block;
+  text-align: center;
+}
+
+h2 {
+  font-style: normal;
+}
+
+.container {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+/* TdM */
+.toc-container {
+  margin-left: 5%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.toc-list {
+  padding: 0;
+}
+
+.toc-list li  {
+  font-size: 14pt;
+  font-weight: 550;
+  line-height: 14.9pt;
+}
+
+.toc-list li:not(:last-child) { 
+  margin-bottom: 5px;  
+}
+
+.toc-list li > a {
+  text-decoration: none;
+}
+
+.toc-delib-dt::after {
+  content: " — "
+}
+
+/* delib */
+.delib{
+  padding-top: 2.5%;
+}
+
+.delib-container {
+  padding: 2.5%;
+  background: #f9f9f9 none repeat scroll 0 0;
+  font-style: normal;
+}
+
+.delib-info-container {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background: #FFFFFF;
+  font-family: Sans-Serif;
+  font-size:97%;
+  line-height: 96%;
+}
+/*
+  position: absolute;
+.delib-info-container::after {
+  content: "";
+  background-color: #000;
+    width: 100%;
+  height: 1px;
+  top: 10px;
+  left: 50%;
+  display: block;
+}
+*/
+
+/* grid pour aligner les items */  
+.delib-info { 
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: grid;
+  grid-template-columns: auto max-content;
+  align-items: end;
+}
+
+.delib-info-key {
+  position: relative;
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.delib-info-key::after {
+  position: absolute;
+  padding-left: .25ch;
+  content: 
+    ". . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . "
+    /*". . . . . . . . . . . . . . . . . . . . . . " repeat(140, ". ")*/
+  ;
+  text-align: right;
+  font-weight: normal;
+}
+
+/*
+  .delib-info-val {
+    text-align: right;
+    padding-left: 100px;
+  }*/
+
+.delib-info-val::before {
+  content: "\00a0";
+  /* padding-right: 5px; add space before */
+}
+
+.delib-txt {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  font-style: italic;
+}
